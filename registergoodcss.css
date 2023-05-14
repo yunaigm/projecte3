@@ -1,0 +1,64 @@
+div {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#registerstyle {
+  background-color: #5e63a3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#registerformu {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+}
+
+#titulo {
+  margin-top: 0;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #5e63a3;
+}
+
+input[type="submit"] {
+  background-color: #5e63a3;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  margin: 8px 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: #6f75b5;
+}
+
+input[type="file"] {
+  border: none;
+}
+
+#error {
+  color: red;
+  margin-top: 10px;
+}

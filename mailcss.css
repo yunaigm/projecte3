@@ -1,0 +1,35 @@
+#email{
+    padding: 0px;
+    margin: 0px;
+    font-family: Century 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  }
+  
+  #email form{
+    width:700px;
+    margin:auto;
+    background-color: #fff;
+    margin-top: 100px;
+  
+  }
+  
+  #email input{
+    margin :15px;
+    padding: 10px;
+    width: 660px;
+    font-size: 18px;
+  
+  }
+  
+  #email textarea{
+    font-size: 18px;
+    margin: 15px;
+    padding: 10px;
+    width: 640px;
+    min-width: 640px;
+    max-width: 640px;
+    min-height: 200px;
+    max-height: 300px;
+  
+  
+  }

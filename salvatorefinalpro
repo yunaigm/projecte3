@@ -1,0 +1,98 @@
+#login
+
+<?php
+    include_once ("conexfinal.php");
+?>
+
+
+<!DOCTYPE html>
+    <head> <link rel ="stylesheet" href="./css/style.css"/> </head>
+        
+    <body>
+        <!--Creem el formulari de registre-->
+        <div class ="registerformu">
+            <h1 id ="titulo"> Inicio de sesión </h1>
+            <form action="login.php" method ="post" name="form3">
+                <label for="email">Indica tu correo electrónico:</label><br>
+                <br />
+                <input type="text" id="email" name="email">
+                <br />
+                <br />
+                <label for="contrasena">Indica tu contraseña:</label><br>
+                <br />
+                <input type ="password" id ="contrasena" name="contrasena" />
+                <br />
+                <br />
+                <input type="submit" id ="logenviado" name="logenviado" value="Enviar" />
+             
+            
+            </form>
+        </div>
+
+
+    </body>
+
+
+</html>
+
+
+<?php
+require "functions.php";
+#Vamos a obtener los datos de la database para ver si haya algun correo y contraseña que coincidan con el especificado.
+ 
+ if(isset($_POST['logenviado'])){
+
+    $q = "SELECT * FROM `usuarios` WHERE `email` = '" . $_POST['email'] . "' AND `contrasena` = '" . $_POST['contrasena'] . "'";
+  
+      $z= mysqli_query($conexion, $q);
+  
+       if (mysqli_num_rows($z) == 0) {
+  
+        echo 'El usuario o contraseña es incorrecto';
+   
+        }else{
+  
+        echo 'Logged succesfully';
+        echo "<script type='text/javascript'>alert('Hola');</script>";
+
+        $info=$_POST['email'];
+
+        $zz="yes";
+
+        #Le pasamos a la página de logins el usuario logged y la confirmación del loggin.
+     
+        loginfc2($zz, $info);
+
+
+
+        
+
+        exit(); 
+
+
+    
+}
+
+      
+
+    }
+    function loginfc2($zz, $info){
+        include_once("mandalorian.php");
+        $msg="hola";    
+        if($zz == "yes"){
+            fotoinom($zz, $info);
+            $msg="hola2";
+            echo "<script type='text/javascript'>alert('$msg');</script>";
+           
+            echo " <a href='mandalorian.php'>Click</a> ";
+            echo "aceite";
+            exit(); 
+        } else {
+            $msg="hola3";
+           
+            echo ".";
+        }
+    }
+
+
+?>
